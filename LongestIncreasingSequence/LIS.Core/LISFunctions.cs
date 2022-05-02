@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace LIS.Core
 {
@@ -32,7 +33,7 @@ namespace LIS.Core
         /// </summary>
         /// <param name="numbers"></param>
         /// <returns></returns>
-        public static IList<int> GetFirstLongestIncreasingSubsequence(string inputString)
+        public static string GetFirstLongestIncreasingSubsequence(string inputString)
         {
             if (string.IsNullOrEmpty(inputString)) throw new ArgumentException("Parameter not supplied");
 
@@ -58,7 +59,22 @@ namespace LIS.Core
             {
                 throw new Exception($"Method : GetFirstLongestIncreasingSubsequence; Failed to Get First Longest Increasing Subsequence");
             }
-            return resultSequence;    
+
+            var resultString = BuildResultString(resultSequence);
+
+            return resultString;            
+        }
+
+        private static string BuildResultString(List<int> resultSequence)
+        {
+            var stringBuilder = new StringBuilder();
+            foreach (var item in resultSequence)
+            {
+                stringBuilder.Append(item);
+                stringBuilder.Append(' ');
+            }
+
+            return stringBuilder.ToString().TrimStart().TrimEnd();
         }
 
         private static void ProcessResultSequence(List<int> tempSequence, List<int> resultSequence)
