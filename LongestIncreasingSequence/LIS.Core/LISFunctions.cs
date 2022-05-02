@@ -11,12 +11,10 @@ namespace LIS.Core
         /// </summary>
         /// <param name="inputString"></param>
         /// <returns></returns>
-        public static IList<int> CovertStringToListOfNumbers(string inputString)
+        private static IList<int> CovertStringToListOfNumbers(string inputString)
         {
             try
             {
-                if (string.IsNullOrEmpty(inputString)) throw new ArgumentException("Parameter not supplied");
-
                 var resultList = new List<int>();
                 var stringList = inputString.Split(' ').ToList();
                 stringList.ForEach(element => resultList.Add(int.Parse(element)));
@@ -25,7 +23,7 @@ namespace LIS.Core
             }
             catch (Exception)
             {
-                throw new Exception($"Failed to process the provided input : {inputString}, please check your input and try again");
+                throw new Exception($"Method : CovertStringToListOfNumbers; Failed to process the provided input : {inputString}, please check your input and try again.");
             }
         }
 
@@ -34,35 +32,53 @@ namespace LIS.Core
         /// </summary>
         /// <param name="numbers"></param>
         /// <returns></returns>
-        public static IList<int> GetFirstLongestIncreasingSubsequence(IList<int> numbers)
+        public static IList<int> GetFirstLongestIncreasingSubsequence(string inputString)
         {
-            List<int> tempSequence = new List<int>();
-            List<int> resultSequence = new List<int>();
+            if (string.IsNullOrEmpty(inputString)) throw new ArgumentException("Parameter not supplied");
 
-            for (var index = 0; index < numbers.Count; index++)
+            var numbers = CovertStringToListOfNumbers(inputString);
+            var tempSequence = new List<int>();
+            var resultSequence = new List<int>();
+
+            try
             {
-                //traverse the sequence until last element to find the longest sub-sequence
-                if (index != numbers.Count - 1 && numbers[index + 1] > numbers[index])
+                for (var index = 0; index < numbers.Count; index++)
                 {
-                    //Prepare sub sequence list
-                    if (tempSequence.Count == 0)
+                    if (index != numbers.Count - 1 && numbers[index + 1] > numbers[index])
                     {
-                        tempSequence.Add(numbers[index]);
+                        TraverseSequence(numbers, tempSequence, index);
                     }
-                    tempSequence.Add(numbers[index + 1]);
-                }
-                else
-                {
-                    //New prepared sequence is having greater count than existing count
-                    if (resultSequence.Count() < tempSequence.Count())
+                    else
                     {
-                        resultSequence.Clear();
-                        resultSequence.AddRange(tempSequence);
+                        ProcessResultSequence(tempSequence, resultSequence);
                     }
-                    tempSequence.Clear();
                 }
             }
-            return resultSequence;    //return the highest sub sequence list
+            catch (Exception)
+            {
+                throw new Exception($"Method : GetFirstLongestIncreasingSubsequence; Failed to Get First Longest Increasing Subsequence");
+            }
+            return resultSequence;    
+        }
+
+        private static void ProcessResultSequence(List<int> tempSequence, List<int> resultSequence)
+        {
+            if (resultSequence.Count() < tempSequence.Count())
+            {
+                resultSequence.Clear();
+                resultSequence.AddRange(tempSequence);
+            }
+            tempSequence.Clear();
+        }
+
+        private static void TraverseSequence(IList<int> numbers, List<int> tempSequence, int index)
+        {
+            //Prepare sub sequence list
+            if (tempSequence.Count == 0)
+            {
+                tempSequence.Add(numbers[index]);
+            }
+            tempSequence.Add(numbers[index + 1]);
         }
     }
 }
