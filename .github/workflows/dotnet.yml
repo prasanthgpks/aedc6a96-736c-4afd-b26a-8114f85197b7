@@ -1,25 +1,25 @@
-name: .NET
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+name: GitHub Actions Demo
+on: [push]
 jobs:
-  build:
-
+  Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: 5.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+      - run: echo "🎉 To the person (who assigned me this fantastic coding challenge),"
+      - run: echo "🐧 Greetings and hope you are doing great !"
+      - run: echo "🐧 Your assignment has given me couple of sleep less nights ! I have only done some part of it."
+      - run: echo "🐧 I have tried my best to solve this but i understood that my current skills are not enough to complete it !"
+      - run: echo "🐧 But iam sure, if given a chance, i will upgrade my skills on the job and by demand, "
+      - run: echo "🐧 since i got the feel of the CI/CD space and i really like to work on it & to be challenged. "
+      - run: echo "🐧 I hope you have assessed me by now :) "
+      - run: echo " "
+      - run: echo "🐧 Yours Sincerely,"
+      - run: echo "🐧 Prasanth"
+	  
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
