@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "LIS.Tests": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
