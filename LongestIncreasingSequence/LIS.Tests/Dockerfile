@@ -12,6 +12,10 @@ COPY . .
 WORKDIR "/src/LIS.Tests"
 RUN dotnet build "LIS.Tests.csproj" -c Release -o /app/build
 
+FROM build AS test
+LABEL test=true
+RUN dotnet test -c Release --results-directory /testresults1 --logger "trx;LogFileName=test_results1.trx" "LIS.Tests.csproj"
+
 FROM build AS publish
 RUN dotnet publish "LIS.Tests.csproj" -c Release -o /app/publish
 
