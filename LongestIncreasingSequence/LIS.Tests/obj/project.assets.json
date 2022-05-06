@@ -5746,11 +5746,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Learning\\Prasanth_Km\\LongestIncreasingSequence\\LIS.Tests\\LIS.Tests.csproj",
+      "projectUniqueName": "C:\\Learning\\kmart1\\aedc6a96-736c-4afd-b26a-8114f85197b7\\LongestIncreasingSequence\\LIS.Tests\\LIS.Tests.csproj",
       "projectName": "LIS.Tests",
-      "projectPath": "C:\\Learning\\Prasanth_Km\\LongestIncreasingSequence\\LIS.Tests\\LIS.Tests.csproj",
+      "projectPath": "C:\\Learning\\kmart1\\aedc6a96-736c-4afd-b26a-8114f85197b7\\LongestIncreasingSequence\\LIS.Tests\\LIS.Tests.csproj",
       "packagesPath": "C:\\Users\\User-PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Learning\\Prasanth_Km\\LongestIncreasingSequence\\LIS.Tests\\obj\\",
+      "outputPath": "C:\\Learning\\kmart1\\aedc6a96-736c-4afd-b26a-8114f85197b7\\LongestIncreasingSequence\\LIS.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5770,8 +5770,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Learning\\Prasanth_Km\\LongestIncreasingSequence\\LIS.Core\\LIS.Core.csproj": {
-              "projectPath": "C:\\Learning\\Prasanth_Km\\LongestIncreasingSequence\\LIS.Core\\LIS.Core.csproj"
+            "C:\\Learning\\kmart1\\aedc6a96-736c-4afd-b26a-8114f85197b7\\LongestIncreasingSequence\\LIS.Core\\LIS.Core.csproj": {
+              "projectPath": "C:\\Learning\\kmart1\\aedc6a96-736c-4afd-b26a-8114f85197b7\\LongestIncreasingSequence\\LIS.Core\\LIS.Core.csproj"
             }
           }
         }
@@ -5817,16 +5817,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
