@@ -6,15 +6,10 @@ WORKDIR /app
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["LIS.Tests/LIS.Tests.csproj", "LIS.Tests/"]
-COPY ["LIS.Core/LIS.Core.csproj", "LIS.Core/"]
 RUN dotnet restore "LIS.Tests/LIS.Tests.csproj"
 COPY . .
 WORKDIR "/src/LIS.Tests"
 RUN dotnet build "LIS.Tests.csproj" -c Release -o /app/build
-
-FROM build AS test
-LABEL test=true
-RUN dotnet test -c Release --results-directory /testresults1 --logger "trx;LogFileName=test_results1.trx" "LIS.Tests.csproj"
 
 FROM build AS publish
 RUN dotnet publish "LIS.Tests.csproj" -c Release -o /app/publish

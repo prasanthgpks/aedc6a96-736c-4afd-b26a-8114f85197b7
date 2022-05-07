@@ -1,0 +1,12 @@
+name: dockercompose13629655927044005367
+services:
+  lis.tests:
+    build:
+      context: C:\GPK\aedc6a96-736c-4afd-b26a-8114f85197b7\LongestIncreasingSequence
+      dockerfile: LIS.Tests/Dockerfile
+    image: listests
+    networks:
+      default: null
+networks:
+  default:
+    name: dockercompose13629655927044005367_default
