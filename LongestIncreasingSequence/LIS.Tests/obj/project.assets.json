@@ -1641,16 +1641,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
-      },
-      "LIS.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/LIS.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/LIS.Core.dll": {}
-        }
       }
     }
   },
@@ -5722,16 +5712,10 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
-    },
-    "LIS.Core/1.0.0": {
-      "type": "project",
-      "path": "../LIS.Core/LIS.Core.csproj",
-      "msbuildProject": "../LIS.Core/LIS.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "LIS.Core >= 1.0.0",
       "MSTest.TestAdapter >= 2.1.0",
       "MSTest.TestFramework >= 2.1.0",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
@@ -5746,11 +5730,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Learning\\kmart1\\aedc6a96-736c-4afd-b26a-8114f85197b7\\LongestIncreasingSequence\\LIS.Tests\\LIS.Tests.csproj",
+      "projectUniqueName": "C:\\GPK\\aedc6a96-736c-4afd-b26a-8114f85197b7\\LongestIncreasingSequence\\LIS.Tests\\LIS.Tests.csproj",
       "projectName": "LIS.Tests",
-      "projectPath": "C:\\Learning\\kmart1\\aedc6a96-736c-4afd-b26a-8114f85197b7\\LongestIncreasingSequence\\LIS.Tests\\LIS.Tests.csproj",
+      "projectPath": "C:\\GPK\\aedc6a96-736c-4afd-b26a-8114f85197b7\\LongestIncreasingSequence\\LIS.Tests\\LIS.Tests.csproj",
       "packagesPath": "C:\\Users\\User-PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Learning\\kmart1\\aedc6a96-736c-4afd-b26a-8114f85197b7\\LongestIncreasingSequence\\LIS.Tests\\obj\\",
+      "outputPath": "C:\\GPK\\aedc6a96-736c-4afd-b26a-8114f85197b7\\LongestIncreasingSequence\\LIS.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5769,11 +5753,7 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {
-            "C:\\Learning\\kmart1\\aedc6a96-736c-4afd-b26a-8114f85197b7\\LongestIncreasingSequence\\LIS.Core\\LIS.Core.csproj": {
-              "projectPath": "C:\\Learning\\kmart1\\aedc6a96-736c-4afd-b26a-8114f85197b7\\LongestIncreasingSequence\\LIS.Core\\LIS.Core.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

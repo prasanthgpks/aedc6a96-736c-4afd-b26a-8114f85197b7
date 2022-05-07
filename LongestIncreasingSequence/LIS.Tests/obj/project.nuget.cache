@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wD3V05rb9/lYH4UR59mzRuHTwL2bs28ZZ6LbDLkHfv4NlEsYupCgWGgUNJu8lQ9oXJXlHjgUlIkM4ZnaaEH6xw==",
+  "dgSpecHash": "xAiqjq5WOYUWnHESe0Ocwbm77XUFKnugIFWAiarNtKq08Z72esxrZu/Q5YMOIksCsxvwgb7uGGyFuVQ/dwD6Ag==",
   "success": true,
-  "projectFilePath": "C:\\Learning\\kmart1\\aedc6a96-736c-4afd-b26a-8114f85197b7\\LongestIncreasingSequence\\LIS.Tests\\LIS.Tests.csproj",
+  "projectFilePath": "C:\\GPK\\aedc6a96-736c-4afd-b26a-8114f85197b7\\LongestIncreasingSequence\\LIS.Tests\\LIS.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User-PC\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\User-PC\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
