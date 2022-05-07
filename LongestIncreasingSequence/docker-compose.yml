@@ -1,8 +1,9 @@
-version: '3.4'
-
+version: '3'
 services:
-  lis.tests:
-    image: ${DOCKER_REGISTRY-}listests
-    build:
-      context: .
-      dockerfile: LIS.Tests/Dockerfile
+  unittests:
+    image: mcr.microsoft.com/dotnet/sdk:3.1
+    volumes:
+      - .:/code
+    command:
+      - /bin/bash
+      - /code/run-tests.sh

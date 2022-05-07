@@ -1,20 +1,9 @@
-#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+FROM mcr.microsoft.com/dotnet/sdk:3.1
 
-FROM mcr.microsoft.com/dotnet/runtime:3.1 AS base
+COPY . /app
 WORKDIR /app
-
-FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
-WORKDIR /src
-COPY ["LIS.Tests/LIS.Tests.csproj", "LIS.Tests/"]
-RUN dotnet restore "LIS.Tests/LIS.Tests.csproj"
-COPY . .
-WORKDIR "/src/LIS.Tests"
-RUN dotnet build "LIS.Tests.csproj" -c Release -o /app/build
-
-FROM build AS publish
-RUN dotnet publish "LIS.Tests.csproj" -c Release -o /app/publish
-
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "LIS.Tests.dll"]
+RUN ["dotnet", "restore"]
+RUN ["dotnet", "build"]
+EXPOSE 5000/tcp
+RUN chmod +x ./entrypoint.sh
+CMD /bin/bash ./entrypoint.sh

@@ -5,7 +5,6 @@ services:
     image: listests:dev
     container_name: LIS.Tests
     build:
-      target: base
       labels:
         com.microsoft.created-by: "visual-studio"
         com.microsoft.visual-studio.project-name: "LIS.Tests"
